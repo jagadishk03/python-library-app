@@ -3,7 +3,7 @@ services:
   db:
     image: jagadishkumpati/mypy:dbimage
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "3306:3306"
     networks:
@@ -12,7 +12,7 @@ services:
   auth_service:
     image: jagadishkumpati/mypy:authimage
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "5001:5001"
     networks:
@@ -24,7 +24,7 @@ services:
   book_service:
     image: jagadishkumpati/mypy:bookimage
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "5002:5002"
     networks:
@@ -34,7 +34,7 @@ services:
   borrow_service:
     image: jagadishkumpati/mypy:borrowimage
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "5003:5003"
     networks:
@@ -45,7 +45,7 @@ services:
   frontend:
     image: jagadishkumpati/mypy:appimage
     deploy:
-      replicas: 1
+      replicas: 2
     ports:
       - "5000:5000"
     networks:
